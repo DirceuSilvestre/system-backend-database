@@ -1,4 +1,4 @@
-# Enterprise System: BackEnd API & Relational Database
+# Delicatessen System: BackEnd API & Relational Database
 
 Este repositório contém um sistema BackEnd completo integrado a um Banco de Dados Relacional robusto. O projeto foi concebido a partir de um cenário real (Mini Mundo) fornecido na disciplina TN727 - Banco de Dados da Universidade Federal Rural do Rio de Janeiro (UFRRJ), evoluindo para uma aplicação BackEnd pronta para consumo.
 
