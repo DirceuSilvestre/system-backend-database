@@ -1,6 +1,6 @@
 # Enterprise System: BackEnd API & Relational Database
 
-Este repositório contém um sistema BackEnd completo integrado a um Banco de Dados Relacional robusto. O projeto foi concebido a partir de um cenário real (Mini Mundo) fornecido na disciplina TN727 - Banco de Dados da **Universidade Federal Rural do Rio de Janeiro (UFRRJ)**, evoluindo para uma aplicação BackEnd pronta para consumo.
+Este repositório contém um sistema BackEnd completo integrado a um Banco de Dados Relacional robusto. O projeto foi concebido a partir de um cenário real (Mini Mundo) fornecido na disciplina TN727 - Banco de Dados da Universidade Federal Rural do Rio de Janeiro (UFRRJ), evoluindo para uma aplicação BackEnd pronta para consumo.
 
 O objetivo deste projeto é demonstrar a fusão entre uma modelagem de dados altamente eficiente (integridade e normalização) e uma camada de serviços (API) performática, escalável e segura.
 
@@ -69,7 +69,7 @@ Para clonar, configurar e executar este ecossistema BackEnd em sua máquina loca
 
 1. **Clonar o repositório:**
 ```bash
-git clone [https://github.com/DirceuSilvestre/system-backend-database.git](https://github.com/DirceuSilvestre/system-backend-database.git)
+git clone https://github.com/DirceuSilvestre/system-backend-database.git
 cd system-backend-database
 ```
 
@@ -79,15 +79,15 @@ python -m venv venv
 ```
 
 3. **Ativar o Ambiente Virtual:**
-
-    * No Windows:
+     * No Windows:
     ```bash
     venv\Scripts\activate
     ```
-    * No Linux/macOS:
+     * No Linux/macOS:
     ```bash
     source venv/bin/activate
     ```
+    
 4. **Instalar as Dependências:**
 ```bash
 pip install -r requirements.txt
