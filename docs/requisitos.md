@@ -10,7 +10,7 @@
 ## 2. Requisitos Funcionais (RF)
 * **RF01:** Permitir o cadastro (inclusão) e manutenção de produtos (contendo descrição e origem).
 * **RF02:** Permitir que o Sommelier registre recomendações de harmonização entre queijos e bebidas.
-* **RF03:** Permitir o registro de acessórios de café/chá (contendo nome, tipo de preparo, bebidas associadas e tempo de preparo).
+* **RF03:** Permitir o registro de acessórios de café/chá, bebidas em geral (contendo nome, tipo de preparo, bebidas associadas e tempo de preparo).
 * **RF04:** Permitir que o Atendente registre novos pedidos personalizados dos clientes.
 * **RF05:** Permitir que os Cozinheiros visualizem a lista de itens pendentes para preparação (com quantidade e descrição).
 * **RF06:** Permitir que o Cozinheiro atualize o status do item para "Concluído", informando a data/hora de confecção e a data de validade.
