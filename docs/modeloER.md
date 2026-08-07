@@ -79,7 +79,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `cpf_funcionario` | Varchar(11) | Validação pelo Módulo 11. Regex: `^\d{11}$`<br> | **PK**<br> | Não | CPF único do colaborador. |
+| `cpf_funcionario` | Varchar(11) | Validação pelo Módulo 11. Regex: `^\d{11}$` | **PK** | Não | CPF único do colaborador. |
 | `nome_funcionario` | Varchar(100) | Nome completo civil. | - | Não | Nome do funcionário. |
 | `cargo_funcionario` | Varchar(50) | Ex: `'Atendente'`, `'Cozinheiro'`, `'Gerente'`, `'Sommelier'`. | - | Não | Cargo exercido na empresa. |
 
@@ -87,7 +87,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `cpf_funcionario` | Varchar(11) | Referência à tabela `FUNCIONARIO`. | **PK / FK**<br> | Não | CPF herdado da entidade pai `FUNCIONARIO`. |
+| `cpf_funcionario` | Varchar(11) | Referência à tabela `FUNCIONARIO`. | **PK / FK** | Não | CPF herdado da entidade pai `FUNCIONARIO`. |
 | `formacao_sommelier` | Varchar(100) | Ex: *WSET Level 3*, *ABS*, *SENAC*. | - | Não | Certificação ou instituição de formação. |
 
 ---
@@ -98,7 +98,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_produto` | Inteiro | Chave primária gerada pelo sistema. | **PK**<br> | Não | Código identificador único do produto. |
+| `id_produto` | Inteiro | Chave primária gerada pelo sistema. | **PK** | Não | Código identificador único do produto. |
 | `nome_produto` | Varchar(100) | Nome comercial do item. | - | Não | Nome exibido em listas e cardápios. |
 | `descricao_produto` | Text | Detalhamento descritivo do item. | - | Não | Descrição completa do produto. |
 | `preco_venda` | Decimal(10,2) | Valor numérico maior que zero ($> 0.00$). | - | Não | Preço praticado para venda. |
@@ -110,7 +110,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK**<br> | Não | Identificador herdado de `PRODUTO`. |
+| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK** | Não | Identificador herdado de `PRODUTO`. |
 | `sabor_queijo` | Varchar(50) | Ex: *Suave*, *Intenso*, *Picante*. | - | Não | Perfil de sabor do queijo. |
 | `textura_queijo` | Varchar(50) | Ex: *Macia*, *Cremosa*, *Semidura*, *Dura*. | - | Não | Consistência física da massa. |
 | `maturacao_queijo` | Varchar(50) | Ex: *Fresco*, *30 dias*, *12 meses*. | - | Não | Período ou estágio de cura. |
@@ -119,7 +119,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK**<br> | Não | Identificador herdado de `PRODUTO`. |
+| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK** | Não | Identificador herdado de `PRODUTO`. |
 | `padeiro_fabricante_pao` | Varchar(100) | Nome do mestre padeiro ou padaria parceira. | - | Sim | Responsável pela fornada/receita. |
 | `formato_pao` | Varchar(50) | Ex: *Baguete*, *Redondo*, *Focaccia*. | - | Não | Apresentação física do pão. |
 
@@ -135,7 +135,7 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK**<br> | Não | Identificador herdado de `PRODUTO`. |
+| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK** | Não | Identificador herdado de `PRODUTO`. |
 | `tipo_preparo` | Varchar(50) | Ex: *Prensa Francesa*, *Decantação*. | - | Não | Método de preparo/serviço associado. |
 | `tempo_preparo` | Inteiro | Tempo estimado em minutos ($\ge 0$). | - | Sim | Tempo médio de preparo. |
 | `bebida_preparada` | Varchar(50) | Ex: *Café*, *Chá*, *Vinho*. | - | Sim | Tipo de bebida harmonizada ou preparada. |
@@ -144,9 +144,8 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK**<br> | Não | Identificador herdado de `PRODUTO`. |
-| `data_confeccao` | Date | Data da confecção ($\le \text{hoje}$). | - | Não | Data de preparação do lote. |
-| `hora_confeccao` | Time | Formato `HH:MM:SS`. | - | Não | Horário de conclusão do preparo. |
+| `id_produto` | Inteiro | Referência à tabela `PRODUTO`. | **PK / FK** | Não | Identificador herdado de `PRODUTO`. |
+| `data_hora_confeccao` | Datetime | Data e hora da confecção `YYYY-MM-DD HH:MM:SS`. | - | Não | Data e hora da conclusão do preparo |
 
 ---
 
@@ -166,19 +165,17 @@
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_pedido` | Inteiro | Identificador autoincrementável. | **PK**<br> | Não | Código único da encomenda personalizada. |
-| `data_criacao_pedido` | Date | Data em que o pedido foi efetuado. | - | Não | Data de abertura do pedido. |
-| `hora_criacao_pedido` | Time | Horário no formato `HH:MM:SS`. | - | Não | Hora de abertura do pedido. |
-| `data_retirada_pedido` | Date | Data prevista para a retirada do pedido. | - | Não | Data em que o cliente buscará a encomenda. |
-| `hora_retirada_pedido` | Time | Hora prevista para a retirada do pedido. | - | Não | Horário estipulado para busca. |
+| `id_pedido` | Inteiro | Identificador autoincrementável. | **PK** | Não | Código único da encomenda personalizada. |
+| `data__hora_criacao_pedido` | Datetime | Data e hora em que o pedido foi efetuado `YYYY-MM-DD HH:MM:SS`. | - | Não | Data e hora de abertura do pedido. |
+| `data_hora_retirada_pedido` | Date | Data e hora prevista para a retirada do pedido. | - | Não | Data e hora em que o cliente buscará a encomenda. |
 | `status_pedido` | Varchar(30) | `'Pendente'`, `'Em Preparo'`, `'Pronto'`, `'Retirado'`, `'Cancelado'`. | - | Não | Situação global da encomenda. |
 
 #### `ITEM_PEDIDO` (Entidade Associativa)
 
 | Atributo | Tipo de Dado | Domínio / Regra | Tipo de Chave | Nulo? | Descrição |
 | --- | --- | --- | --- | --- | --- |
-| `id_pedido` | Inteiro | Referência a `PEDIDO_PERSONALIZADO`. | **PK / FK**<br> | Não | Pedido ao qual o item pertence. |
-| `id_produto` | Inteiro | Referência a `PRODUTO`. | **PK / FK**<br> | Não | Produto associado. |
+| `id_pedido` | Inteiro | Referência a `PEDIDO_PERSONALIZADO`. | **PK / FK** | Não | Pedido ao qual o item pertence. |
+| `id_produto` | Inteiro | Referência a `PRODUTO`. | **PK / FK** | Não | Produto associado. |
 | `quantidade_item` | Inteiro | Quantidade solicitada ($> 0$). | - | Não | Unidades do produto no pedido. |
 | `preco_unitario_praticado` | Decimal(10,2) | Preço histórico negociado/aplicado. | - | Não | Preço praticado no momento da compra. |
 | `status_item` | Varchar(30) | `'Pendente'`, `'Em Preparo'`, `'Concluído'`, `'Falta Ingrediente'`. | - | Não | Status individual de preparação do item. |
@@ -195,12 +192,12 @@ As cardinalidades e nomenclaturas abaixo foram mapeadas diretamente do Diagrama 
 | --- | --- | --- | --- | --- | --- |
 | **CLIENTE** | $(0, n)$ | **realiza** | $(1, 1)$ | **PEDIDO_PERSONALIZADO** | Um cliente realiza de $0$ a vários pedidos. Todo pedido personalizado pertence obrigatoriamente a $1$ cliente. |
 | **FUNCIONARIO** | $(0, n)$ | **monta** | $(1, 1)$ | **PEDIDO_PERSONALIZADO** | Um funcionário (atendente) monta $0$ a vários pedidos. Todo pedido é montado por $1$ funcionário. |
-| **PEDIDO_PERSONALIZADO** | $(1, 1)$ | **pedido_item** | $(1, n)$ | **ITEM_PEDIDO** | Todo pedido contém obrigatoriamente de $1$ a N itens. Cada item de pedido pertence a $1$ pedido específico. |
+| **PEDIDO_PERSONALIZADO** | $(1, n)$ | **pedido_item** | $(1, 1)$ | **ITEM_PEDIDO** | Todo pedido contém obrigatoriamente de $1$ a N itens. Cada item de pedido pertence a $1$ pedido específico. |
 | **FUNCIONARIO** | $(0, n)$ | **prepara** | $(0, 1)$ | **ITEM_PEDIDO** | Um funcionário (cozinheiro) prepara de $0$ a N itens. Um item de pedido pode ser preparado por até $1$ funcionário. |
 | **ITEM_PEDIDO** | $(1, 1)$ | **item_produto** | $(0, n)$ | **PRODUTO** | Cada item de pedido refere-se a $1$ produto cadastrado. Um produto pode figurar em $0$ ou vários itens de pedidos. |
 | **FUNCIONARIO** | $(0, n)$ | **cozinha** | $(1, 1)$ | **PRODUCAO_PROPRIA** | Um funcionário (cozinheiro) cozinha $0$ a vários produtos de produção própria. Cada item de produção própria é cozinhado por $1$ funcionário. |
-| **FUNCIONARIO** | $(0, n)$ | **aquisicao** | $(1, 1)$ | **PRODUTO** | Um funcionário (gerente) realiza a aquisição de $0$ a N produtos. Todo produto cadastrado possui a supervisão/aquisição de $1$ funcionário. |
-| **PRODUTO** | $(1, 1)$ | **produto_estoque** | $(1, n)$ | **ESTOQUE** | Todo produto cadastrado deve ter pelo menos $1$ ou mais entradas/lotes no estoque. |
+| **FUNCIONARIO** | $(0, n)$ | **aquisicao** | $(1, 1)$ | **PRODUTO** | Um funcionário (gerente) realiza a aquisição de $0$ a N produtos. Todo produto cadastrado possui a supervisão/aquisição de $1$ funcionário (gerente). |
+| **PRODUTO** | $(1, n)$ | **produto_estoque** | $(1, 1)$ | **ESTOQUE** | Todo produto cadastrado deve ter pelo menos $1$ ou mais entradas/lotes no estoque. |
 | **SOMMELIER** | $(0, n)$ | **Rel** | $(1, 1)$ | **harmonização** | O sommelier registra recomendações na relação ternária de harmonização. |
 | **BEBIDA** | $(0, n)$ | **Rel** | $(1, 1)$ | **harmonização** | A bebida compõe a relação ternária de harmonização. |
 | **QUEIJO** | $(0, n)$ | **Rel** | $(1, 1)$ | **harmonização** | O queijo compõe a relação ternária de harmonização. |

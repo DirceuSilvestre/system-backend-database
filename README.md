@@ -19,7 +19,7 @@ Utilize este checklist para acompanhar o progresso real de entrega do sistema. A
 
 ### Fase 1: Engenharia e Arquitetura de Dados (Em Andamento)
 - [x] **Análise do Mini Mundo:** Extração de entidades, atributos e regras de negócio do cenário real.
-- [ ] **Modelagem Conceitual:** Criação do Diagrama Entidade-Relacionamento (ER) na pasta `/docs`.
+- [x] **Modelagem Conceitual:** Criação do Diagrama Entidade-Relacionamento (ER) na pasta `/docs`.
 - [ ] **Modelagem Lógica & Normalização:** Aplicação estrita das regras até a **3ª Forma Normal (3FN)** para eliminar redundâncias e anomalias.
 - [ ] **Script DDL (Data Definition Language):** Criação física das tabelas no banco com integridade referencial (`PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `CHECK`).
 - [ ] **Script DML (Data Manipulation Language):** População do banco de dados com dados de teste coerentes e criação de queries complexas (INNER JOINs, agregações e filtros).
